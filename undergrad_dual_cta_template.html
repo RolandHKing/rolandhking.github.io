@@ -1,0 +1,560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- DEFAULT EMAIL CLIENT STYLES & GLOBAL STYLES -->
+    <style type="text/css">
+      /* LOAD INTER HEAVY FONT FOR NUMBERS */
+      @import url('https://fonts.googleapis.com/css2?family=Inter');
+      @import url('http://fonts.googleapis.com/css?family=Roboto');
+      /* GLOBAL FONT STYLES */
+      body {
+        -webkit-text-size-adjust:100%;
+        -ms-text-size-adjust:100%;
+        margin: 0 !important;
+        font-size: 16px;
+        font-family: Helvetica, Arial, sans-serif !important;
+        color: #444444;
+        line-height: 170%;
+        background-color: #FFFFFF;
+        word-spacing: normal;
+      }
+      .body {
+        -webkit-text-size-adjust:100%;
+        -ms-text-size-adjust:100%;
+        margin: 0 !important;
+        font-size: 16px;
+        font-family: Helvetica, Arial, sans-serif !important;
+        color: #444444;
+        line-height: 170%;
+        background-color: #FFFFFF;
+        word-spacing: normal;
+      }
+      .stylingblock-content-wrapper {
+        font-size: 16px;
+        font-family: Helvetica, Arial, sans-serif !important;
+        color: #444444;
+        line-height: 170% !important;
+        word-spacing: normal;
+      }
+      h1 {
+        font-size: 38px !important;
+        color: #505050 !important;
+        font-family: Trebuchet MS, Helvetica, Arial, sans-serif !important;
+        line-height: 120% !important;
+        font-style: normal !important;
+        font-weight: bold !important;
+        margin: 0px !important;
+        padding: 10px 0px 10px 0px;
+      }
+      h2 {
+        font-size: 28px !important;
+        color: #606060 !important;
+        font-family: Trebuchet MS, Helvetica, Arial, sans-serif !important;
+        line-height: 140% !important;
+        font-style: normal !important;
+        font-weight: bold !important;
+        margin: 0px !important;
+        padding: 10px 0px 10px 0px;
+      }
+      h3 {
+        font-size: 20px !important;
+        color: #808080 !important;
+        font-family: Helvetica, Arial, sans-serif !important;
+        text-transform: uppercase;
+        font-style:normal !important;
+        font-weight: bold !important;
+        line-height: 140% !important;
+        margin: 0px !important;
+        padding: 10px 0px 10px 0px;
+      }
+      /* GENERAL CONTENT TAG OVERRIDE */
+      p {
+        margin: 0px !important;
+      }
+      ul {
+        line-height: 170%;
+        margin: 15px 50px 30px 50px;
+        padding: 0;
+        list-style-type: square;
+      }
+      ol {
+        line-height: 170%;
+        margin: 15px 50px 30px 50px;
+        padding: 0;
+      }
+      ul li, ol li {
+        padding: 5px 0px;
+      }
+      table, td, div, p {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      table td {
+        border-collapse: collapse;
+      }
+      img {
+        outline: 0;
+      }
+      /* LOCK SIZE OF UNIVERSITY LOGO */
+      .logo img {
+        display: block !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 150px !important;
+        margin: 0 auto !important;
+        height: auto !important;
+      }
+      /* LOCK SIZE OF HERO IMAGE SO IT REMAINS MOBILE RESPONSIVE */
+      .hero-image img {
+        max-width: 700px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+      /* REMOVES LINE HEIGHT SPACER ON HERO IMAGE -- MSO ONLY */
+      .hero-image table td {
+        line-height: 100% !important;
+      }
+      a {
+        color: #505050 !important;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      a img {
+        border:none;
+      }
+      a.buttonstyles {
+        text-decoration: none !important;
+        font-weight: bold !important;
+        font-family: Trebuchet MS, Helvetica, Arial, sans-serif !important;
+        font-size: 18px !important;
+        color: #333333 !important;
+      }
+      /* CUSTOM FOOTER STYLE UPDATES & OVERRIDES */
+      .footer-menu td, .footer-menu a {
+        font-size: 18px;
+        font-family: Helvetica, Arial, sans-serif;
+        color: #e8e8e8 !important;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .footer-menu td {
+        padding: 30px 40px 40px 40px;
+      }
+      .footer-preferences a, .footer-preferences p, .footer-preferences td {
+        line-height: 150%;
+        font-size: 11px;
+        font-family: Helvetica, Arial, sans-serif;
+        color: #d9d9d9 !important;
+        font-weight: lighter;
+        text-align: center;
+      }
+      .footer-preferences-size {
+        max-width: 500px;
+        width: 100%;
+        padding: 0px 20px;
+      }
+      .footer-preferences-size p {
+        margin: 15px 0 !important;
+      }
+      .bottom-cta h1, .bottom-cta h2, .bottom-cta h3 {
+        color: #fdfdfd !important;
+      }
+      .bottom-cta td, .bottom-cta p, .bottom-cta span {
+        color: #fdfdfd !important;
+      }
+      .bottom-cta a {
+        color: #fdfdfd !important;
+      }
+      /* BOTTOM CTA BUTTON STYLE UPDATE */
+      .bottom-cta-btn .buttonstyles {
+        border: 2px solid #fdfdfd !important;
+        background-color: #18191B !important;
+      }
+      /* CONTENT BLOCK STYLES */
+      .two-col-image p {
+        margin: 10px 0 20px 0 !important;
+      }
+      .pull-quote, .pull-quote div {
+        font-size: 18px;
+        color: #777777;
+        font-style: italic;
+        line-height: 170%;
+      }
+      .callout-card {
+        font-size: 18px;
+        color: #666666;
+        line-height: 160%;
+      }
+      .callout-card-number div {
+        padding-left: 20px;
+        font-size: 72px;
+        font-family: Inter, Roboto, Trebuchet MS, Helvetica, san-serif;
+        font-weight: bold;
+        color: #007176;
+        line-height: 100% !important;
+        padding-top: 15px;
+      }
+      .gold-banner div {
+        border-color: #fdb515;
+        border-style: solid;
+        border-width: 4px;
+        padding: 10px;
+        margin-right: 15px;
+        vertical-align: top !important;
+        height: 150px;
+      }
+      .gold-banner-ranking {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 150%;
+        text-transform: uppercase;
+      }
+      .gold-banner-publication {
+        font-size: 14px;
+        font-style: italic;
+        font-weight: normal;
+        padding-top: 10px;
+        line-height: 150%;
+      }
+      .text-on-image p {
+        font-size: 58px;
+        color: #ffffff;
+        font-family: Trebuchet MS, Helvetica, Arial, sans-serif !important;
+        line-height: 120% !important;
+        font-style: normal !important;
+        font-weight: bold !important;
+        margin: 0px !important;
+      }
+    </style>
+    <!-- MOBILE RESPONSIVE STYLES -->
+    <style type="text/css">
+      @media screen and (max-width: 480px) {
+        .mobile-padding {
+          padding: 0px 30px 30px 30px !important;
+        }
+        .mobile-hidden {
+          display: none !important;
+        }
+        .logo img {
+          max-width: 100px !important;
+        }
+        .header-image-spacer td {
+          height: 10px;
+        }
+        .footer-menu td {
+          padding: 10px 20px 20px 20px;
+        }
+        .footer-menu a {
+          font-size: 15px;
+        }
+        .footer-spacer {
+          height: 20px;
+        }
+        .footer-content-area-spacer td {
+          height: 75px;
+        }
+        .footer-preferences-size p {
+          margin-top: 0 !important;
+        }
+        .line-break {
+          border-spacing: 60px 0px !important;
+        }
+        .pull-quote img, .pull-quote div {
+          margin-bottom: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 480px !important;
+          text-align: left !important;
+        }
+        .two-col-image img, .two-col-image div {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 480px !important;
+          text-align: center !important;
+        }
+        .two-col-image p {
+          padding: 0px 0 5px 0 !important;
+        }
+        h1 {
+          font-size: 28px !important;
+          line-height: 140% !important;
+          margin: 0px !important;
+          padding: 20px 0 0 0;
+        }
+        h2 {
+          font-size: 22px !important;
+          line-height: 140% !important;
+          margin: 0px !important;
+          padding: 20px 0px 20px 0px;
+        }
+        h3 {
+          font-size: 18px !important;
+          line-height: 150% !important;
+          margin: 0px !important;
+          padding: 10px 0px 10px 0px;
+        }
+        ul, ol {
+          margin: 15px 30px 30px 40px;
+        }
+        .gold-banner div {
+          padding: 20px;
+          margin-bottom: 25px;
+          max-width: 180px !important;
+          height: 160px;
+        }
+        .gold-banner-ranking {
+          font-size: 18px;
+        }
+        .gold-banner-publication {
+          font-size: 16px;
+        }
+        .text-on-image p {
+          font-size: 28px;
+          color: #ffffff;
+          font-family: Trebuchet MS, Helvetica, Arial, sans-serif !important;
+          line-height: 130% !important;
+          font-style: normal !important;
+          font-weight: bold !important;
+          margin: 0px !important;
+        }
+        .text-on-image div {
+          padding: 10px 20px 0px 20px !important;
+        }
+        .callout-card {
+          padding: 20px 20px !important;
+        }
+        .callout-card-image img {
+          vertical-align: middle;
+          width: 70px !important;
+          height: auto !important;
+        }
+        .callout-card-number div {
+          vertical-align: middle;
+          padding-left: 15px;
+          font-family: Inter, Roboto, Trebuchet MS, Helvatica, san-serif;
+          font-weight: bold;
+          font-size: 13vw;
+          padding-top: 10px;
+        }
+      }
+    </style>
+    <!-- MSO CUSTOM STYLES -->
+    <!--[if mso]>
+<style type="text/css">
+/* RESET LINE HEIGHT */
+body, table, td {
+line-height : 100%;
+}
+/* LINE HEIGHT AND MARGIN ADJUSTMENT FOR HEADERS */
+.stylingblock-content-wrapper td h1 {
+line-height: 120% !important;
+margin: 20px 0 !important;
+font-size: 38px !important;
+}
+.stylingblock-content-wrapper td h2 {
+line-height: 130% !important;
+margin: 20px 0 !important;
+}
+.stylingblock-content-wrapper td h3 {
+line-height: 140% !important;
+margin: 20px 0 !important;
+}
+/* PADDING ADJUSTMENT FOR CALLOUT CARD */
+.callout-card-number {
+padding-left: 20px;
+line-height: 100% !important;
+padding-top: 15px;
+padding-bottom: 20px;
+}
+</style>
+<![endif]--> 
+  </head>
+  <!-- GLOBAL STYLES & TABLES FOR ALL CONTENT IN THE TEMPLATE -->
+  <body>
+    <!-- HIDDEN DIV WITH TRACKER INFO -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+      <custom name="opencounter" type="tracking" />
+      <custom name="usermatch" type="tracking" />
+    </div>
+    <!-- PREHEADER WHITESPACE HACK -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <!-- TABLE 1: MAIN CONTAINER CENTERED -->
+    <table class="body" role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color: #e8e8e8; border: none; border-spacing: 0;">
+      <tr>
+        <td align="center" valign="top" style="padding: 0px;">
+          <custom type="header"/>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <!-- TABLE 2: CONTAINER FOR LOGO IMAGE -->
+          <table role="presentation" align="center" cellspacing="0" cellpadding="0" style="border: none; border-spacing: 0">
+            <tr style="height: 50px;">
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" class="logo">
+                <div data-type="slot" data-key="umbclogo" data-allowed-blocks="imageblock; htmlblock" data-label="UMBC Logo">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                &nbsp;
+              </td>
+            </tr>
+            <!-- TABLE 2 CLOSE -->
+          </table>
+          <tr>
+            <td>
+              <!--[if mso]>
+<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="700" style="border: none; border-spacing: 0;">
+<tr>
+<td width="700">
+<![endif]-->
+              <!-- TABLE 3: TOP HERO IMAGE & CTA -->
+              <table role="presentation" align="center" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 700px; border: none; border-spacing: 0; background-color: #FFFFFF;">
+                <tr>
+                  <td class="hero-image">
+                    <div data-type="slot" data-key="topheroimage" data-label="Top hero image" data-allowed-blocks="imageblock; htmlblock">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="mobile-padding" style="padding: 40px 60px 60px 60px;">
+                    <div data-type="slot" data-key="topctacontent" data-label="Top CTA Content Area">
+                    </div>
+                    <!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+                    <!-- TABLE 3 CLOSE -->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr style="height: 80px;">
+            <td>&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!--[if mso]>
+<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="700" style="border: none; border-spacing: 0; background-color: #18191B;">
+<tr>
+<td width="700">
+<![endif]-->
+              <!-- TABLE 4: BOTTOM HERO IMAGE & CTA -->
+              <table class="bottom-cta" role="presentation" align="center" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 700px; border: none; border-spacing: 0; background-color: #18191B;">
+                <tr>
+                  <td class="hero-image">
+                    <div data-type="slot" data-key="bottomheroimage" data-label="Bottom hero image" data-allowed-blocks="imageblock; htmlblock">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="mobile-padding bottom-cta-btn" style="padding: 40px 60px 60px 60px;">
+                    <div data-type="slot" data-key="bottomctacontent" data-label="Bottom CTA Content Area">
+                    </div>
+                    <!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+                    <!-- TABLE 4 CLOSE -->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr style="height: 115px;">
+            <td>&nbsp;
+            </td>
+          </tr>
+          <!-- TABLE 1 CLOSE -->
+        </td>
+      </tr>
+    </table>
+    <!-- TABLE 5: FOOTER CONTAINER -->
+    <table role="presentation" width="100%" align="center" cellspacing="0" cellpadding="0" style="border: none; border-spacing: 0; background-color: #242424;">
+      <tr>
+        <td style="padding-top: 40px;">
+          <!-- TABLE 6: FOOTER MENU -->
+          <table role="presentation" class="footer-menu" align="center" cellspacing="0" cellpadding="0" style="border: none; border-spacing: 0;">
+            <tr>
+              <td align="center">
+                <a alias="footer menu apply" title="footer menu apply" href="https://undergraduate.umbc.edu/apply/">Apply</a>
+              </td>
+              <td align="center">
+                <a alias="footer menu visit" title="footer menu visit" href="https://undergraduate.umbc.edu/visit/">Visit Us</a>
+              </td>
+              <td align="center">
+                <a alias="footer menu contact" title="footer menu contact" href="https://undergraduate.umbc.edu/connect/">Contact Us</a>
+              </td>
+            </tr>
+            <!-- TABLE 6 CLOSE -->
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table align="center" cellpadding="0" cellspacing="0" style="width: 70%; max-width: 700px; border-top: 2px solid #505050; border-collapse: collapse; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+            <tr>
+              <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <span>&nbsp;</span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- TABLE 7: FOOTER PREFERENCES -->
+          <table class="footer-preferences" role="presentation" align="center" cellspacing="0" cellpadding="0" style="border: none; border-spacing: 0;">
+            <tr>
+              <td class="footer-preferences-size" align="center">
+                <custom type="footer" />
+                <!--[if mso]>
+<table role="presentation" align="center" style="width: 500px;">
+<tr>
+<td align="center" style="line-height: 150%; font-size: 11px; font-family: Helvetica, Arial, sans-serif; color: #d9d9d9; font-weight: lighter; padding: 20px;">
+<![endif]-->
+                <p>Office of Undergraduate Admissions and Orientation
+                  <br>
+                  <a alias="footer admissions email" conversion="false" title="footer admissions email" href="mailto:admissions@umbc.edu">admissions@umbc.edu</a> | 410-455-2292
+                  <br>
+                  %%Member_Busname%%
+                  <br>%%Member_Addr%%, %%Member_City%%, %%Member_State%% %%Member_PostalCode%% %%Member_Country%%
+                </p>
+                <p>No longer want to receive these emails? Unsubscribe or manage your preferences 
+                  <a alias="footer profile changes" title="footer profile changes" href="%%profile_center_url%%">here</a>.
+                  <custom name="opencounter" type="tracking">
+                  </custom>
+                </p>
+                <!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 50px;">
+                &nbsp;
+                <!-- TABLE 7 CLOSE -->
+              </td>
+            </tr>
+          </table>
+          <!-- TABLE 5 CLOSE -->
+        </td>
+      </tr>
+    </table>      
+  </body>
+</html>
