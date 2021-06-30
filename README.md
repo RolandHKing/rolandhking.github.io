@@ -32,4 +32,4 @@
  * [View Email →](https://rolandhking.github.io/umbc_success_ready_email.html)
 ### general_template_all_content_blocks.html
  * Template showing all content block design styles with placeholder content
- * [View Email →](https://rolandhking.github.io/umbc_campus_life_email.html)
+ * [View Email →](https://rolandhking.github.io/general_template_all_content_blocks.html)
