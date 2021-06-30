@@ -13,6 +13,7 @@
 **Image/Asset Styling and Editing:** Roland King
 
 **Email Content:** UMBC Director of Marketing
+
 ## TOOLS & TESTING
 * Visual Studio Code Editor
 * Photoshop
