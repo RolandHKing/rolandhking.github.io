@@ -32,4 +32,4 @@
 * URL: https://rolandhking.github.io/umbc_success_ready_email.html
 ### general_template_all_content_blocks.html
 * Template showing all content block design styles with placeholder content
-* URL: https://rolandhking.github.io/general_template_all_content_blocks.html
+* URL: [rolandhking.github.io/general_template_all_content_blocks.html](https://rolandhking.github.io/general_template_all_content_blocks.html)
