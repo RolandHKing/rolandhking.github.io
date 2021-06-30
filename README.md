@@ -17,6 +17,7 @@
 * Photoshop
 * Salesforce Marketing Cloud (SFMC)
 * Email on Acid
+
 ## FILE DETAILS
 ### content_blocks_template.html
  * HTML and CSS for all content blocks designed for SFMC
