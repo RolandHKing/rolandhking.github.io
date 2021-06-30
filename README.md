@@ -1,7 +1,7 @@
 # Salesforce Marketing Cloud Template & Email Design
 ## OVERVIEW
 ### Email Templates and Content Blocks
- * Showing code for my Salesforce Marketing Cloud templates, including pre-designed content blocks for other email marketers to use in email campaigns.
+ * Showing code for my Salesforce Marketing Cloud templates, including pre-designed content blocks for other email marketers to use in email campaigns. Source for all template files can be viewed on [my Github Repository](https://github.com/RolandHKing/rolandhking.github.io).
 
 ### Email Examples
  * Includes two email builds and one "live" template to show all content block designs, which can be viewed on my [Github hosted page](https://rolandhking.github.io).
