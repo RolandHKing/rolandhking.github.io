@@ -6,13 +6,10 @@
  * Includes two "live" email examples which can be viewed on https://rolandhking.github.io hosted page.
 
 ## AUTHORS
-**Template and Content Block Design:** Roland King
-
-**HTML and CSS:** Roland King
-
-**Image/Asset Styling and Editing:** Roland King
-
-**Email Content:** UMBC Director of Marketing
+ * **Template and Content Block Design:** Roland King
+ * **HTML and CSS:** Roland King
+ * **Image/Asset Styling and Editing:** Roland King
+ * **Email Content:** UMBC Director of Marketing
 
 ## TOOLS & TESTING
 * Visual Studio Code Editor
