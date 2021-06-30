@@ -1,5 +1,5 @@
 # rolandhking.github.io
-## GITHUB REPOSITORY OVERVIEW
+## OVERVIEW
 ### Email Templates and Content Blocks
  * Showing code for my Salesforce Marketing Cloud templates, including pre-designed content blocks for other email marketers to use in email campaigns.
 ### Email Examples
