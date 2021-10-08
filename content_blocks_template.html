@@ -208,7 +208,37 @@
     </tr>
   </table>
   
-  
+  <!-- SECONDARY CTA CALLOUT CARD -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 90%; max-width: 550px; border-radius: 20px; border: none; border-spacing: 0;">
+  <tr>
+    <td class="callout-card" style="padding: 40px; box-shadow: 0px 10px 12px -5px rgba(90,90,90,0.75); background-color: #ffffff; border-radius: 20px; border: 2px solid #007176; border-spacing: 0;">
+      <h2 align="center" style="color:#808080;font-family:Arial,helvetica,sans-serif;font-size:22px;font-style:normal;font-weight:bold;line-height:1;padding-top: 20px;">
+        Secondary Call-to-Action Header
+      </h2>
+      <p align="left" style="padding: 10px 0px 20px 0px;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis tempus libero id interdum. Maecenas tristique elementum luctus. Cras commodo sem velit, sit amet tempus lacus efficitur eget. In pharetra leo eu arcu condimentum, ac varius metus volutpat. Sed neque purus, tempus non libero sit amet, tempus aliquet arcu.
+        <br>
+        <br>
+        Integer est ex, blandit nec finibus in, dignissim at neque. Sed diam ipsum, commodo ut venenatis in, volutpat at orci. Pellentesque arcu metus, tempus a tempor in, tristique quis est.
+      </p>
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+        <tr>
+          <td align="center" style="padding: 20px 0px;">
+            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+              <tr>
+                <td bgcolor="#FFFFFF" class="innertd buttonblock" style=" border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; background-color: #FFFFFF;">
+                  <a alias="Learn More" class="buttonstyles" conversion="false" data-linkto="http://" href="https://www.umbc.edu/" style="font-size: 16px; font-family: helvetica, Arial, sans-serif; color: #007176 !important; text-align: center; text-decoration: none; display: block; background-color: #FFFFFF; border: 2px solid #007176; padding: 12px 18px; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px;" target="_blank" title="Learn More">Learn More</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
   <!-- CALLOUT CARD: MEET A RETRIEVER -->
   <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 90%; max-width: 550px; border-radius: 20px; border: none; border-spacing: 0;">
     <tr>
@@ -253,8 +283,87 @@
     </tr>
   </table>
   
+  <!-- COMPLETED CHECKLIST ITEMS -->
+  <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 90%; max-width: 350px; background-color: #e8e8e8;">
+    <tr>
+      <td style="background-color: #007176; padding: 15px;">
+        <!--[if mso]>
+  <table role="presentation" width="100%">
+  <tr>
+  <td style="width: 40px; padding-right: 10px;" align="left" valign="middle">
+  <![endif]-->
+        <div style="display: inline-block; margin-right: 15px; vertical-align: middle;">
+          <img alt="checkmark icon" height="30" src="https://image.s11.sfmc-content.com/lib/fe34117171640475771073/m/1/d636882a-7d3b-455e-a8ae-4fe37060454a.png" style="display: block;" width="30">
+        </div>
+        <!--[if mso]>
+  </td>
+  <td style="width: 310px;" align="left" valign="middle">
+  <![endif]-->
+        <div style="display: inline-block; font-size: 24px; vertical-align: middle; color: #FFFFFF;">Completed Items
+        </div>
+        <!--[if mso]>
+  </td>
+  </tr>
+  </table>
+  <![endif]-->
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px 30px 30px 20px; font-weight: bold; line-height: 170%;">
+        <div>
+          %%[Set @CompletedItems = LookupRows('Complete_Items', 'Application_Id', Application_Id)
+  %%[ for @itemRow = 1 to RowCount(@CompletedItems) do 
+       Set @row = Row(@CompletedItems,@itemRow) ]%%
+          <p>%%=Field(@row,'Item_Description')=%%</p>
+          <p>%%[ next @itemRow ]%% 
+          </p>
+        </div>
+      </td>
+    </tr>
+  </table>
   
-  
+
+  <!-- MISSING CHECKLIST ITEMS -->
+  <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 90%; max-width: 350px; background-color: #e8e8e8;">
+    <tr>
+      <td style="background-color: #E74C3A; padding: 15px;">
+        <!--[if mso]>
+  <table role="presentation" width="100%">
+  <tr>
+  <td style="width: 40px; padding-right: 10px;" align="left" valign="middle">
+  <![endif]-->
+        <div style="display: inline-block; margin-right: 15px; vertical-align: middle;">
+          <img alt="checkmark icon" height="30" src="https://image.s11.sfmc-content.com/lib/fe34117171640475771073/m/1/1cb4f9d4-aebb-4754-9f06-6d11267f3b95.png" style="display: block;" width="30">
+        </div>
+        <!--[if mso]>
+  </td>
+  <td style="width: 310px;" align="left" valign="middle">
+  <![endif]-->
+        <div style="display: inline-block; font-size: 24px; vertical-align: middle; color: #FFFFFF;">Missing Items
+        </div>
+        <!--[if mso]>
+  </td>
+  </tr>
+  </table>
+  <![endif]-->
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px 30px 30px 20px; font-weight: bold; line-height: 170%;">
+        <div>
+          %%[Set @IncompleteItems = LookupRows('Incomplete_Items', 'Application_Id', Application_Id)
+  %%[for @itemRow = 1 to RowCount(@IncompleteItems) do 
+       Set @row = Row(@IncompleteItems,@itemRow) ]%%
+          <p>%%=Field(@row,'Item_Description')=%%</p>
+          <p>%%[ next @itemRow ]%% 
+          </p>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+
+
   <!-- TEST CONTENT BLOCKS [DO NOT USE] -->
   
   <!-- [DRAFT] BACKGROUND IMAGE WITH TEXT OVERLAY -->
@@ -288,3 +397,44 @@
   </td>
   </tr>
   </table>
+
+  <!-- SHADY GROVE PROGRAMS LIST -->
+  <style type="text/css">
+    .usg-program-card div {
+      padding: 20px;
+      box-shadow: 0px 10px 12px -5px rgba(90,90,90,0.75);
+      background-color: #ffffff;
+      border-radius: 20px;
+      border: 2px solid #007176;
+      border-spacing: 0;
+      display: inline-block;
+      width: 100%;
+      max-width: 220px;
+      height: 450px;
+    }
+    .usg-program-card p {
+      font-size: 16px;
+      color: #666666;
+      line-height: 160%;
+      text-align: left;
+    }
+    .usg-program-card ul {
+      line-height: 150%;
+      margin: 10px 10px 0px 30px;
+    }
+  </style>
+  <style type="text/css">
+    @media screen and (max-width: 480px) {
+      .usg-program-card div {
+        padding: 10px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+      }
+      .usg-program-card ul {
+        line-height: 150%;
+        margin: 10px 10px 0px 30px;
+      }
+    }
+  </style>
