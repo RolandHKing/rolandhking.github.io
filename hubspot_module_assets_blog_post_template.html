@@ -1,0 +1,92 @@
+<!-- CUSTOM MODULE ASSETS FOR BLOG POST TEMPLATE -->
+<!--------------------------->
+<!-- HERO IMAGE 700 PIXELS -->
+<!--------------------------->
+{% if module.hero_image_email.src %}
+{% set sizeAttrs = 'width="{{ module.hero_image_email.width }}" height="{{ module.hero_image_email.height }}"' %}
+{% if module.hero_image_email.size_type == 'auto' %}
+    {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+{% elif module.hero_image_email.size_type == 'auto_custom_max' %}
+    {% set sizeAttrs = 'width="{{ module.hero_image_email.max_width }}" height="{{ module.hero_image_email.max_height }}" style="max-width: 100%; height: auto;"' %}
+{% endif %}
+ {% set loadingAttr = module.hero_image_email.loading != 'disabled' ? 'loading="{{ module.hero_image_email.loading }}"' : '' %}
+<img src="{{ module.hero_image_email.src }}" alt="{{ module.hero_image_email.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+{% endif %}
+
+<!------------------------------------------------->
+<!-- POST INFORMATION: CATEGORY, TITLE, SUBTITLE -->
+<!------------------------------------------------->
+<table border="0" cellspacing="0" cellpadding="0" role="presentation">
+  <tr>
+    <td><h3>{{ module.post_type }}</h3></td>
+  </tr>
+  <tr>
+    <td><h1>{{ module.post_title }}</h1></td>
+  </tr>
+  <tr>
+    <td><h2>{{ module.post_subtitle }}</h2>
+    </td>
+  </tr>
+</table>
+
+<!------------------------>
+<!-- GENERAL CTA BUTTON -->
+<!------------------------>
+<!-- CTA -->
+<table border="0" cellspacing="0" cellpadding="0" role="presentation">
+    <tr>
+      <td class="mso-cta-override" style="background-color: #023E8A; border: 2px solid #023E8A; padding: 12px 18px; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px;">
+        {% set href = module.button_cta_link.url.href %}
+        {% if module.button_cta_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a style="font-size: 16px; font-family: Arial, helvetica, sans-serif; font-weight: bold; letter-spacing: .75px; color: #FFFFFF !important; text-align: center; text-decoration: none; display: block;" href="{{ href }}"
+           {% if module.button_cta_link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if module.button_cta_link.rel %}rel="{{ module.button_cta_link.rel }}"{% endif %}
+           >
+            {{ module.cta_button_text }}
+        </a>
+      </td>
+    </tr>
+  </table>
+  <!-- CTA CLOSE -->
+
+<!----------------------------->
+<!-- LATEST STORIES HEADLINE -->
+<!----------------------------->
+  <h3>
+    {{ module.latest_stories_title }}
+  </h3>
+
+<!----------------------------------------->
+<!-- BLOG POST RSS LISTING WITH SETTINGS -->
+<!----------------------------------------->  
+{% if module.rss_feed_type == "external" %}
+    {% set feed_source = "{is_external=True, rss_url='"~module.rss_url~"', content_group_id=''}" %}
+    {% set is_external = true %}
+{% elif module.rss_feed_type == "blog" %}
+    {% set feed_source = "{is_external=False, content_group_id='" ~ module.content_group_id ~ "', rss_url=''}" %}
+    {% set is_external = false %}
+{% endif %}
+
+{% set blog = blog_by_id(module.content_group_id) %}
+
+{% rss_listing
+    publish_date_text="{{ module.publish_date_text }}",
+    rss_url="{{ module.rss_url }}",
+    is_external="{{ is_external }}",
+    click_through_text="{{ module.click_through_text }}",
+    show_date="{{ module.show_date }}",
+    content_group_id="{{ module.content_group_id }}",
+    include_featured_image="{{ module.include_featured_image }}",
+    publish_date_format="{{ module.publish_date_format }}",
+    publish_date_language="{{ blog.dateFormattingLanguage }}",
+    show_detail="{{ module.show_detail }}",
+    show_author="{{ module.show_author }}",
+    number_of_items="{{ module.number_of_items }}",
+    title="{{ module.title }}",
+    limit_to_chars="{{ module.limit_to_chars }}",
+    attribution_text="{{ module.attribution_text }}",
+    topic_id="{{ module.topic_id }}"
+    feed_source="{{ feed_source }}"
+%}
