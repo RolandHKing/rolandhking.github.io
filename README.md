@@ -21,23 +21,23 @@ Showing code for my Hubspot MAS and Salesforce Marketing Cloud (SFMC) templates,
 
 ### hubspot_block_img_content_general_template.html
 * Uses display attribute to present content and images in traditional and responsive view.
-* [View Source →]()
-
-### hubspot_blog_post_template.html
-* Custom modules so template can be easily used by non-technical team members to send blog post emails. Includes RSS module.
-* [View Source →]()
+* [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_block_img_content_general_template.html)
 
 ### hubspot_dual_CTA_email_template.html
 * Highlight: Blend of CSS and Photoshop design to present illusion of overlapping content area to draw reader in.
-* [View Source →]()
+* [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_dual_CTA_email_template.html)
+
+### hubspot_blog_post_template.html
+* Custom modules so template can be easily used by non-technical team members to send blog post emails. Includes RSS module.
+* [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_blog_post_template.html)
 
 ### hubspot_marketing_report_email_template_internal.html
 * Highlight: Card-style approach to easily find content that matters most to internal sales team.
-* [View Source →]()
+* [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_marketing_report_email_template_internal.html)
 
 ### hubspot_default_email_template.html
 * Highlight: Use of background url() to draw attention to email and increase CTA.
-* [View Source →]()
+* [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_default_email_template.html)
 
 ### <ins>EMAIL EXAMPLES</ins>
 
