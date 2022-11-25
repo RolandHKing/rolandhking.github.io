@@ -18,7 +18,6 @@ Showing code for my Hubspot MAS and Salesforce Marketing Cloud (SFMC) templates,
 
 ## HUBSPOT
 ### <ins>TEMPLATES</ins>
-CSS and HTML source files showing template design and approach within the Hubspot system.
 
 ### hubspot_block_img_content_general_template.html
 * Uses display attribute to present content and images in traditional and responsive view.
