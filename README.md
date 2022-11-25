@@ -19,7 +19,7 @@ Github Repository showing HTML/CSS for my Hubspot MAS and Salesforce Marketing C
 ### <ins>TEMPLATES</ins>
 
 ### hubspot_block_img_content_general_template.html
-* Uses display attribute to present content and images in traditional and responsive view.
+Uses display attribute to present content and images in traditional and responsive view.
 * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_block_img_content_general_template.html)
 * [View Associated Modules →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/Modules/hubspot_module_assets_block_content_img_text_template.html)
 
