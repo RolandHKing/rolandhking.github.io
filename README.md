@@ -19,7 +19,7 @@ Github Repository showing HTML/CSS for my Hubspot MAS and Salesforce Marketing C
 ### <ins>TEMPLATES</ins>
 
 ### hubspot_block_img_content_general_template.html
-Uses display attribute to present content and images in traditional and responsive view.
+* Uses display attribute to present content and images in traditional and responsive view.
 * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_block_img_content_general_template.html)
 * [View Associated Modules →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/Modules/hubspot_module_assets_block_content_img_text_template.html)
 
@@ -34,12 +34,12 @@ Uses display attribute to present content and images in traditional and responsi
 * [View Associated Modules →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/Modules/hubspot_module_assets_blog_post_template.html)
 
 ### hubspot_default_email_template.html
-* Highlight: Use of background url() to draw attention to email and increase CTA.
+* Use of background url() to draw attention to email and increase CTA.
 * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_default_email_template.html)
 * [View Associated Modules →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/Modules/hubspot_module_assets_default_template.html)
 
 ### hubspot_marketing_report_email_template_internal.html
-* Highlight: Card-style approach to easily find content that matters most to internal sales team.
+* Card-style approach to easily find content that matters most to internal sales team.
 * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_marketing_report_email_template_internal.html)
 
 ### <ins>EMAIL EXAMPLES</ins>
