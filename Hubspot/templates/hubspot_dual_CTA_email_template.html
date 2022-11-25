@@ -1,0 +1,429 @@
+<!--
+    templateType: email
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+    <style type="text/css" id="hs-inline-css">
+        /*<![CDATA[*/
+        /* everything in this style tag will be inlined onto matching elements */
+        /* GLOBAL FONT STYLES */
+        body {
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+            margin: 0 !important;
+            font-size: 18px;
+            font-family: Helvetica, Arial, sans-serif !important;
+            line-height: 170%;
+            word-spacing: normal;
+        }
+        /* GLOBAL STYLES APPLIED TO BODY CLASS FOR MSO */
+        .body {
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+            margin: 0 !important;
+            font-size: 18px;
+            font-family: Helvetica, Arial, sans-serif !important;
+            line-height: 170%;
+            word-spacing: normal;
+        }
+        /* CUSTOM HEADER STYLES AND SIZES */
+        h1 {
+            font-size: 50px;
+            font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
+            line-height: 120%;
+            font-style: normal;
+            font-weight: bold;
+            margin: 0px !important;
+            padding: 10px 0px 10px 0px;
+        }
+        h2 {
+            font-size: 38px;
+            font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
+            line-height: 140%;
+            font-style: normal;
+            font-weight: bold;
+            margin: 0px !important;
+            padding: 10px 0px 10px 0px;
+        }
+        h3 {
+            font-size: 24px;
+            font-family: Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 140%;
+            margin: 0px !important;
+            padding: 10px 0px 10px 0px;
+        }
+        /* ANCHOR TAG STYLE UPDATE */
+        a {
+            font-family: Helvetica, Arial, sans-serif !important;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        /* REMOVE BORDER FROM ALL LINKED IMAGES */
+        a img {
+            border: none;
+        }
+        /* GENERAL CONTENT TAG OVERRIDES */
+        p {
+            margin: 0px !important;
+        }
+        ul {
+            line-height: 170%;
+            margin: 15px 50px 30px 50px;
+            padding: 0;
+            list-style-type: square;
+        }
+        ol {
+            line-height: 170%;
+            margin: 15px 50px 30px 50px;
+            padding: 0;
+        }
+        ul li, ol li {
+            padding: 5px 0px;
+        }
+        img {
+            outline: 0;
+        }
+        /* FORCES FONT STYLE FOR MSO */
+        table, td, div, p {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        /* VIEW IN BROWSER TEXT STYLE */
+        .view-in-browser {
+            padding: 20px;  
+            font-size: 10px;
+            color: #8c8c8c;
+        }
+        .view-in-browser a {
+            font-size: 10px !important;
+            color: #8c8c8c !important;
+            text-decoration: underline !important;
+            font-weight: normal !important;
+        }
+        /* APPLY PADDING FOR JACS LOGO CONTAINER */
+        .jacs-logo td {
+            padding: 25px 50px 20px 50px;
+        }
+        /* LOCK SIZE OF HERO IMAGE SO IT REMAINS MOBILE RESPONSIVE */
+        .hero-image img {
+            max-width: 700px !important;
+            width: 100% !important;
+            height: auto !important;
+        }
+        /* TOP CONTENT AREA FONT AND ANCHOR COLOR */
+        .top-cta h1, .top-cta h2, .top-cta h3 {
+            color: #FFFFFF;
+        }
+        .top-cta {
+            color: #FFFFFF;
+        }
+        .top-cta a {
+            color: #00AEEF;
+        }
+        /* LOCK SIZE OF BOTTOM CTA IMAGE THAT BREAKS UP THE DESIGN */
+        .image-break img {
+            display: block !important;
+            padding: 0 !important;
+            width: 100% !important;
+            max-width: 700px !important;
+            margin: 0 auto !important;
+            height: auto !important;
+        }
+        /* REMOVES LINE HEIGHT SPACER ON HERO IMAGE -- MSO ONLY */
+        .hero-image table td {
+            line-height: 100% !important;
+        }
+        /* PADDING FOR CONTENT AREAS */
+        .body-padding {
+            padding: 40px 60px 40px 60px;
+        }
+        .cta-button-padding {
+            padding: 0px 60px 80px 60px;
+        }
+        /* BOTTOM CONTENT FONT AND ANCHOR COLOR */
+        .bottom-cta h1, .bottom-cta h2, .bottom-cta h3 {
+            color: #444444;
+        }
+        .bottom-cta {
+            color: #444444;
+        }
+        .bottom-cta a {
+            color: #00AEEF;
+        }
+        /* FOOTER STYLE UPDATES */
+        .footer-padding {
+            padding: 30px 60px 40px 60px;
+        }
+        .footer-preferences {
+            color: #bfbfbf;
+            font-size: 11px;
+            line-height: 150%;
+            font-weight: 400;
+            padding-top: 20px;
+        }
+        .footer-preferences a {
+            color: #bfbfbf !important;
+            font-weight: normal !important;
+            text-decoration: underline !important;
+        }
+        /* SOCIAL ICON SIZE, FONT, AND POSITIONING */
+        .social-icons a {
+            font-size: 18px !important;
+            color: #e8e8e8 !important;
+            font-weight: bold !important;
+            text-transform: uppercase;
+            text-decoration: none !important;
+            letter-spacing: 1.25px;
+        }
+        .social-icons img {
+            display: block;
+            padding: 0;
+            width: 100%;
+            max-width: 25px;
+            margin: 0 auto !important;
+            height: auto !important;
+        }
+        .social-icon-padding {
+            padding-right: 30px;
+        }
+    </style>
+    <!-- MOBILE RESPONSIVE STYLES -->
+    <style type="text/css" id="hs-inline-css">
+        @media screen and (max-width: 480px) {
+          /* ADJUST HEADER SIZE FOR MOBILE VIEW */
+          h1 {
+              font-size: 28px !important;
+              padding: 40px 0px 20px 0px !important;
+          }
+          h2 {
+              font-size: 22px !important;
+              line-height: 140% !important;
+              padding: 20px 0px 20px 0px !important;
+          }
+          h3 {
+              font-size: 18px !important;
+              line-height: 150% !important;
+              padding: 10px 0px 10px 0px !important;
+          }
+          /* UPDATED MARGINS FOR LIST ITEMS FOR MOBILE */
+          ul, ol {
+              margin: 15px 30px 30px 40px;
+          }
+          /* UPDATE PADDING AND CENTER VIEW IN BROWSER LINK */
+          .view-in-browser {
+              padding: 10px !important;
+          }
+          /* ADJUST FONT SIZE FOR MOBILE VIEWING */
+          .body {
+              font-size: 14px !important;
+          }
+          /* CHANGE MAX-WIDTH SIZE FOR JACS LOGO IN MOBILE */
+          .jacs-logo img {
+              max-width: 65px !important;
+              height: auto !important;
+          }
+          /* UPDATE PADDING FOR JACS LOGO IN MOBILE */
+          .jacs-logo td {
+              padding: 15px 50px 10px 50px !important;
+          }
+          /* MOBILE PADDING UPDATES FOR CONTENT, BUTTONS, AND LINKS */
+          .body-padding {
+              padding: 0px 30px 30px 30px !important;
+          }          
+          .cta-button-padding {
+              padding: 0px 30px 60px 30px !important;
+          }
+          a.mobile-button-style {
+              font-size: 14px !important;
+          }
+          .mobile-hidden {
+              display: none !important;
+          }
+          /* UPDATED PADDING FOR FOOTER PREFERENCES AREA FOR 100% WIDTH MOBILE VIEW */
+          .footer-padding {
+              padding: 30px 30px 40px 30px !important;
+          }
+          /* REMOVE MARGIN FOR FOOTER PREFERENCES AREA FOR MOBILE */
+          .footer-preferences {
+              margin-top: 0 !important;
+          }
+        }
+    </style>
+    <!-- RESPONSIVE STYLE FOR OLDER DEVICES BELOW 375 SCREEN WIDTH -->
+    <style type="text/css" id="hs-inline-css">
+        @media screen and (max-width: 374px) {
+          .social-icons img {
+              width: 25px !important;
+          }
+          .social-icon-padding {
+              padding-right: 5px !important;
+          }
+        }
+    </style>
+    <!-- MSO CUSTOM STYLES -->
+    <!--[if mso]>
+    <style type="text/css">
+          /* RESET LINE HEIGHT FOR CTA BUTTONS */
+          .mso-cta-override {
+              line-height : 100%;
+          }
+          /* RESET ANCHOR TEXT COLOR FOR CTA BUTTONS */
+          .mso-cta-override a {
+              color: #FFFFFF !important;
+          }
+          /* ADJUST LINE HEIGHT FOR H1 */
+          .top-cta h1, .bottom-cta h1 {
+              line-height : 120%;
+          }
+          /* ADJUST LINE HEIGHT FOR H2 */
+          .top-cta h2, .bottom-cta h2 {
+              line-height : 140%;
+          }
+          /* ADJUST LINE HEIGHT FOR H3 */
+          .top-cta h3, .bottom-cta h3 {
+              line-height : 140%;
+          }
+          /* RESET LINE HEIGHT FOR P TAGS */
+					p {
+							line-height: 120%;
+					}
+    </style>
+    <![endif]--> 
+  </head>
+    <body>
+    <!-- Preview text (text which appears right after subject in certain email clients) -->
+    <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}
+    </div>
+    <!-- PREHEADER WHITESPACE HACK -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <!-- TABLE 1: MAIN CONTAINER CENTERED -->
+    <table class="body" role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" align="center"style="background-color: #e8e8e8; border: none; border-spacing: 0;">
+        <tr>
+            <td align="center" class="view-in-browser">
+                <!-- View as webpage link -->
+                {% if content.create_page %}
+                <div>Not rendering correctly? View this email as a web page <a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">here</a>.</div>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <!--[if mso]>
+              <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="700" style="border: none; border-spacing: 0;">
+                <tr>
+                  <td width="700">
+                  <![endif]-->
+                <!-- TABLE 2: CONTAINER FOR LOGO IMAGE -->
+                <table class="jacs-logo" role="presentation" align="center" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 700px; border: none; border-spacing: 0; background-color: #0A2540;">
+                    <tr>
+                        <td align="center">
+                            <!-- Hubspot email template logo -->
+                            {% module "module_16388876692075" path='/Email Templates/Modules/JACS Logo - White', label="JACS Logo - White" %}
+                        </td>
+                    </tr>
+                </table>
+                <!-- TABLE 2 CLOSE -->
+                <!-- TABLE 3: TOP HERO IMAGE & CTA -->
+                <table role="presentation" align="center" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 700px; border: none; border-spacing: 0; background-color: #0A2540;">
+                    <tr>
+                        <td class="hero-image">
+                            <!-- Hubspot hero image content block -->
+                            {% module "module_163882668161880" path='/Email Templates/Modules/Email Hero Image 700px', label="Email Hero Image 700px" %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="body-padding top-cta">
+                            <!-- Hubspot top CTA content block -->
+                            {% module "module_163891311680325" path="@hubspot/rich_text", label="Top CTA Content Area" %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cta-button-padding mobile-button-style">
+                            {% module "module_163941394563629" path="/Email Templates/Modules/Top CTA Button", label="Top CTA Button" %}
+                        </td>
+                    </tr>
+                </table>
+                <!-- TABLE 3 CLOSE -->
+                <!-- TABLE 4: IMAGE BREAK & BOTTOM CTA -->
+                <table role="presentation" align="center" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 700px; border: none; border-spacing: 0; background-color: #FFFFFF;">
+                    <tr>
+                        <td class="image-break">
+                            <!-- Hubspot image break content block -->
+                            {% module "module_163771158616554" path='/Email Templates/Modules/Email Image Break 530px', label="Email Image Break" %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="body-padding bottom-cta">
+                            <!-- Hubspot bottom CTA content block -->
+                            {% module "module_163891324087627" path="@hubspot/rich_text", label="Bottom CTA Content Area" %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cta-button-padding mobile-button-style">
+                            {% module "module_163943204878896" path="/Email Templates/Modules/Bottom CTA Button", label="Bottom CTA Button" %}
+                        </td>
+                    </tr>
+                </table>
+                <!-- TABLE 4 CLOSE -->
+                <!-- TABLE 5: FOOTER -->
+                <table role="presentation" align="center" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 700px; border: none; border-spacing: 0; background-color: #0A2540;">
+                    <tr>
+                        <td class="footer-padding">
+                            <!-- TABLE 6: SOCIAL MEDIA -->
+                            <table role="presentation" class="social-media" align="left" cellspacing="0" cellpadding="0" style="border: none; border-spacing: 0;">
+                                <tr class="social-icons">
+                                    <td align="center" valign="middle">
+                                        <a alias="JACS Linkedin profile page" title="JACS Linkedin profile page" href="https://www.linkedin.com/company/9244710"><img src="https://f.hubspotusercontent10.net/hubfs/20264516/Logos/linkedin-logo.png" width="25px"></a>
+                                    </td>
+                                    <td class="social-icon-padding" align="center" valign="middle">
+                                        <a alias="JACS Linkedin profile page" title="JACS Linkedin profile page" href="https://www.linkedin.com/company/9244710">LinkedIn</a>
+                                    </td>
+                                    <td align="center" valign="middle">
+                                        <a alias="JACS Twitter Feed" title="JACS Twitter Feed" href="https://twitter.com/JacsSolutions"><img src="https://f.hubspotusercontent10.net/hubfs/20264516/Logos/twitter-logo.png" width="25px"></a>
+                                    </td>
+                                    <td align="center" valign="middle">
+                                        <a alias="JACS Twitter Feed" title="JACS Twitter Feed" href="https://twitter.com/JacsSolutions">Twitter</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- TABLE 6 CLOSE -->
+                            <table role="presentation" class="social-media" align="left" cellspacing="0" cellpadding="0" style="border: none; border-spacing: 0;">
+                                <tr>
+                                    <td class="footer-preferences">
+                                        <p id="footer">
+                                            To ensure delivery to your inbox, please add <a href="mailto:marketing@jacs-solutions.com">marketing@jacs-solutions.com</a> to your address book or safe-senders list.
+                                            <br><br>
+                                            You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}. You can update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive. If you no longer wish to receive emails from JACS Solutions, you can unsubscribe from all future emails <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">here</a>.
+                                            <br><br>
+                                            {{ site_settings.company_name }}<br>
+                                            {{ site_settings.company_street_address_1 }},&nbsp;{{ site_settings.company_street_address_2 }}<br>
+                                            {{ site_settings.company_city }},&nbsp;{{ site_settings.company_state }}&nbsp;{{ site_settings.company_zip }}<br>
+                                            {{ site_settings.company_country }}&nbsp;
+                                            <br><br>
+                                            Phone: 1-443-718-4333
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                     <!--[if mso]>
+                    </td>
+                 </tr>
+              </table>
+            <![endif]-->
+            </td>
+        </tr>
+    </table>
+    <!-- TABLE 1 CLOSE -->
+    </body>
+</html>
