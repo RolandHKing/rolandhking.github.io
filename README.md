@@ -20,15 +20,15 @@
 ### <ins>TEMPLATES</ins>
 ### content_blocks_template.html
  * HTML and CSS for all content blocks designed for SFMC
- * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/SFMC/content_blocks_template.html)
+ * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/SFMC/templates/content_blocks_template.html)
 
 ### undergrad_general_email_template.html
  * HTML and CSS for general email campaign template for UMBC
- * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/SFMC/undergrad_general_email_template.html)
+ * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/SFMC/templates/undergrad_general_email_template.html)
 
 ### undergrad_dual_cta_template.html
  * HTML and CSS for alternate template with a dual call-to-action design
- * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/SFMC/undergrad_dual_cta_template.html)
+ * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/SFMC/templates/undergrad_dual_cta_template.html)
 
 ### <ins>EMAIL EXAMPLES</ins>
 ### general_template_all_content_blocks.html
