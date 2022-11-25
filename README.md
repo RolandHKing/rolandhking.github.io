@@ -43,6 +43,25 @@ Github Repository showing HTML/CSS for my Hubspot MAS and Salesforce Marketing C
 * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_marketing_report_email_template_internal.html)
 
 ### <ins>EMAIL EXAMPLES</ins>
+### build-your-own-custom-device-at-techex-oct-5-6.html
+* test
+* [View Email →]()
+
+### extending-technology-lifecycles-extending-care-to-more-patients.html
+* test
+* [View Email →]()
+
+### marketing-insights-report-october-2022.html
+* test
+* [View Email →]()
+
+### the-business-value-of-custom-technology.html
+* test
+* [View Email →]()
+
+### which-industries-have-the-greatest-need-for-rugged-technology.html
+* test
+* [View Email →]()
 
 # Salesforce Marketing Cloud
 ### <ins>TEMPLATES</ins>
