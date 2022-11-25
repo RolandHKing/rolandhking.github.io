@@ -43,6 +43,6 @@
  * Example of email campaign using the dual CTA template
  * [View Email →](https://rolandhking.github.io/SFMC/umbc_success_ready_email.html)
 
-### undergrad_application_example.html
+### undergrad_application_email.html
 * Example of an undergraduate template using AMPscript to display dynamic content
-* [View Email →](https://rolandhking.github.io/SFMC/undergrad_application_example.html)
+* [View Email →](https://rolandhking.github.io/SFMC/undergrad_application_email.html)
