@@ -17,7 +17,7 @@
 * Email on Acid
 
 ## SALESFORCE MARKETING CLOUD
-### TEMPLATES
+### <ins>TEMPLATES</ins>
 ### content_blocks_template.html
  * HTML and CSS for all content blocks designed for SFMC
  * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/SFMC/content_blocks_template.html)
@@ -30,7 +30,7 @@
  * HTML and CSS for alternate template with a dual call-to-action design
  * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/SFMC/undergrad_dual_cta_template.html)
 
-### EMAIL EXAMPLES
+### <ins>EMAIL EXAMPLES</ins>
 ### general_template_all_content_blocks.html
  * Template showing all content block design styles with placeholder content
  * [View Email →](https://rolandhking.github.io/SFMC/general_template_all_content_blocks.html)
