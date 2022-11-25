@@ -1,0 +1,427 @@
+<!--
+    templateType: email
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+    <style type="text/css" id="hs-inline-css">
+        /*<![CDATA[*/
+        /* everything in this style tag will be inlined onto matching elements */
+        /* GLOBAL FONT STYLES */
+        body {
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+            font-size: 18px;
+            color: #444444;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 170%;
+            word-spacing: normal;
+        }
+        /* GLOBAL STYLES APPLIED TO BODY CLASS FOR MSO */
+        .body {
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+            font-size: 16px;
+            color: #444444;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 170%;
+            word-spacing: normal;
+        }
+        /* CUSTOM HEADER STYLES AND SIZES */
+        h1 {
+            font-size: 32px;
+            color: #0A2540 !important;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 120%;
+            font-style: normal;
+            font-weight: bold;
+            margin: 0px 0px 24px 0px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #0A2540 !important;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 140%;
+            font-style: italic;
+            font-weight: bold;
+            margin: 0px 0px 20px 0px;
+        }
+        h3 {
+            font-size: 16px;
+            color: #0A2540 !important;
+            font-family: Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            font-style: normal;
+            line-height: 140%;
+            margin: 0px 0px 12px 0px;
+        }
+        h4 {
+            font-size: 16px;
+            color: #666666 !important;
+            font-family: Helvetica, Arial, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 140%;
+            margin: 0px 0px 12px 0px;
+        }
+        /* ANCHOR TAG STYLE UPDATE */
+        a {
+            font-family: Helvetica, Arial, sans-serif !important;
+            color: #0A2540;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        /* REMOVE BORDER FROM ALL LINKED IMAGES */
+        a img {
+            border: none;
+        }
+        /* GENERAL CONTENT TAG OVERRIDES */
+        p {
+            margin: 0px 0px 20px 0px;
+        }
+        ul {
+            line-height: 170%;
+            margin: 15px 50px 30px 50px;
+            padding: 0;
+            list-style-type: square;
+        }
+        ol {
+            line-height: 170%;
+            margin: 15px 50px 30px 50px;
+            padding: 0;
+        }
+        ul li, ol li {
+            padding: 5px 0px;
+        }
+        img {
+            outline: 0;
+        }
+        /* FORCES FONT STYLE FOR MSO */
+        table, td, div, p {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        /* VIEW IN BROWSER TEXT STYLE */
+        td.view-in-browser {
+            padding: 5px 20px 5px 0px;
+            font-size: 10px;
+            color: #8c8c8c;
+            text-align: right;
+        }
+        .view-in-browser a {
+            font-size: 10px !important;
+            color: #8c8c8c !important;
+            text-decoration: underline !important;
+            font-weight: normal !important;
+        }
+        /* APPLY PADDING FOR JACS LOGO CONTAINER */
+        td.jacs-logo {
+            padding: 15px 20px 20px 20px;
+            text-align: left;
+        }
+        /* LOCK SIZE OF HERO IMAGE SO IT REMAINS MOBILE RESPONSIVE */
+        .hero-image img {
+            max-width: 700px !important;
+            width: 100% !important;
+            height: auto !important;
+        }
+        /* REMOVES LINE HEIGHT SPACER ON HERO IMAGE -- MSO ONLY */
+        .hero-image table td {
+            line-height: 100% !important;
+        }
+        /* PADDING FOR POST TITLE AREA */  
+        .title-padding {
+            padding: 40px 50px 20px 50px;
+        }
+        /* PADDING FOR CONTENT AREA */
+        .body-padding {
+            padding: 0px 50px 30px 50px;
+        }
+        .cta-button-padding {
+            padding: 0px 40px 60px 40px;
+        }
+        /* PADDING FOR THE RSS FEED TITLE */
+        .rss-title-padding {
+            padding: 60px 20px 5px 20px;
+        }
+        /* PADDING FOR THE RSS FEED LIST */
+        .rss-feed-padding {
+            padding: 0px 20px 15px 20px;
+        }
+      /* STYLE OVERRIDE FOR HUBSPOT RSS FEED DATE CLASS */
+        .hs-rss-date {
+            font-style: italic !important;
+            color: #777777 !important;
+        }
+        .footer-preferences a, .footer-preferences p {
+            line-height: 150%;
+            font-size: 11px;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #777777;
+            font-weight: lighter;
+            text-align: center;
+        }
+        .footer-preferences td {
+            padding: 40px 60px 40px 60px;
+        }
+    </style>
+    <!-- MOBILE RESPONSIVE STYLES -->
+    <style type="text/css" id="hs-inline-css">
+        @media screen and (max-width: 700px) {
+          /* ADJUST PADDING FOR CONTENT CONTAINER */
+          .body-padding {
+               padding: 25px 25px 30px 25px !important;
+          }
+          table.border-removal {
+               border: 0px !important;
+          }
+        }
+    </style>
+    
+    <!-- MOBILE RESPONSIVE STYLES -->
+    <style type="text/css" id="hs-inline-css">
+        @media screen and (max-width: 480px) {
+          /* ADJUST HEADER SIZE FOR MOBILE VIEW */
+          h1 {
+              font-size: 24px !important;
+              margin: 0px 0px 12px 0px !important;
+          }
+          h2 {
+              font-size: 18px !important;
+              line-height: 140% !important;
+              margin: 0px 0px 12px 0px !important;
+          }
+          h3 {
+              font-size: 14px !important;
+              line-height: 150% !important;
+              margin: 0px 0px 10px 0px !important;
+          }
+          h4 {
+              font-size: 14px !important;
+              line-height: 140% !important;
+              font-weight: bold;
+              margin: 0px 0px 10px 0px !important;
+          }
+          /* UPDATED MARGINS FOR LIST ITEMS FOR MOBILE */
+          ul, ol {
+              margin: 15px 30px 30px 40px;
+          }
+          /* REMOVE TOP PADDING FOR IMAGES IN MOBILE */
+          .hero-image img {
+              padding-top: 0px !important;
+          }
+          /* REMOVE TABLE BORDER FOR 100% WIDTH MOBILE VIEW */
+          table.border-removal {
+              border: 0px !important;
+          }
+          /* UPDATE PADDING AND CENTER VIEW IN BROWSER LINK */
+          .view-in-browser {
+              padding: 5px !important;
+              text-align: center !important;
+          }
+          /* ADJUST FONT SIZE FOR MOBILE VIEWING */
+          .body {
+              font-size: 14px !important;
+          }
+          /* CHANGE MAX-WIDTH SIZE FOR JACS LOGO IN MOBILE */
+          .jacs-logo img {
+              max-width: 65px !important;
+              height: auto !important;
+          }
+          /* UPDATE PADDING FOR JACS LOGO IN MOBILE */
+          td.jacs-logo {
+              padding: 15px 0px 10px 0px !important;
+              text-align: center !important;
+          }
+          /* MOBILE PADDING UPDATES FOR CONTENT, BUTTONS, AND LINKS */
+          .title-padding {
+            padding: 20px 15px 0px 15px !important;
+          }
+          .body-padding {
+              padding: 25px 15px 30px 15px !important;
+          }
+          .cta-button-padding {
+              padding: 0px 15px 40px 15px !important;
+          }
+          a.mobile-button-style {
+              font-size: 14px !important;
+          }
+          /* UPDATED PADDING FOR FOOTER PREFERENCES AREA FOR 100% WIDTH MOBILE VIEW */
+          .footer-preferences td {
+              padding: 40px 20px 40px 20px !important;
+          }
+      }
+    </style>
+    <!-- MSO CUSTOM STYLES -->
+    <!--[if mso]>
+    <style type="text/css">
+          /* RESET LINE HEIGHT FOR CTA BUTTONS */
+          .mso-cta-override {
+              line-height : 100%;
+          }
+          /* RESET ANCHOR TEXT COLOR FOR CTA BUTTONS */
+          .mso-cta-override a {
+              color: #FFFFFF !important;
+          }
+          /* RESET LINE HEIGHT FOR P TAGS */
+					p {
+							line-height: 120%;
+					}
+    </style>
+    <![endif]--> 
+  </head>
+  <body>
+    <!-- Preview text (text which appears right after subject in certain email clients) -->
+    <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}
+    </div>
+    <!-- PREHEADER WHITESPACE HACK -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <!-- TABLE 1: MAIN CONTAINER CENTERED -->
+    <table class="body" role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color: #FFFFFF; border: none; border-spacing: 0;">
+      <tr>
+        <td align="center">
+          <!--[if mso]>
+          <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="700" style="border: none; border-spacing: 0;">
+            <tr>
+              <td width="700">
+               <![endif]-->
+                <!-- TABLE 2: CONTAINER FOR LOGO IMAGE -->
+                <table role="presentation" align="center" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 700px; border: none; border-spacing: 0; background-color: #FFFFFF;"> 
+                  <tr>
+                    <td class="view-in-browser">
+                      <!-- View as webpage link -->
+                      {% if content.create_page %}
+                      <div><a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">View email in browser</a>.</div>
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="jacs-logo">
+                      <!-- Hubspot email template logo -->
+                      {% module "module_164427049370410" path="/Email Templates/Modules/JACS Logo - Blue", label="JACS Logo" %}
+                    </td>
+                  <tr>
+                   <td style="padding-top: 0px; padding-bottom: 10px; padding-left: 50px; padding-right: 50px; background-color: #ffffff; width: 100%; text-align: left; border-top: 4px solid #034EA1;">&nbsp;</td>
+                  </tr>
+                </table>
+               <!--[if mso]>
+              </td>
+            </tr>
+          </table>
+          <![endif]-->
+        </td>
+       </tr>
+       <tr>
+         <td>
+            <!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="700" style="border: none; border-spacing: 0;">
+             <tr>
+              <td width="700">
+               <![endif]-->
+                 <!-- TABLE 3: HERO IMAGE & MAIN CONTENT -->
+                 <table role="presentation" align="center" cellspacing="0" cellpadding="0" class="border-removal" style="width: 100%; max-width: 700px; border: 2px solid #E5E5E5; border-spacing: 0; background-color: #FFFFFF;">
+                   <tr>
+                     <td align="center" class="hero-image">
+                         <!-- Hubspot hero image content block -->
+                         {% module "module_16529727667941" path="/Email Templates/Modules/Email Hero Image 700px", label="Email Hero Image 700px" %}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td class="title-padding">
+                         <!-- Hubspot Post Type content block -->
+                         {% module "module_165210976707241" path="/Email Templates/Modules/Post Information", label="Post Information" %}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td class="body-padding">
+                         <!-- Hubspot  main content block -->
+                         {% module "email_template_main_email_body" path="@hubspot/email_body" label="Main Email Body" %}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td class="cta-button-padding">
+                         <!-- Hubspot CTA Button -->
+                         {% module "module_164435039029117" path="/Email Templates/Modules/General CTA Button", label="General CTA Button" %}
+                     </td>
+                   </tr>
+                 </table>
+                 <!-- TABLE 3 CLOSE -->
+               <!--[if mso]>
+              </td>
+             </tr>
+            </table>
+            <![endif]--> 
+         </td>
+      </tr>
+      <tr>
+        <td>
+           <!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="700" style="border: none; border-spacing: 0;">
+             <tr>
+              <td width="700">
+               <![endif]-->
+                 <!-- TABLE 4: RSS FEED -->
+                 <table role="presentation" align="center" cellspacing="0" cellpadding="0" class="" style="width: 100%; max-width: 700px; border-spacing: 0; background-color: #FFFFFF;">
+                   <tr>
+                     <td class="rss-title-padding">
+                         <!-- Hubspot Latest Stories Title content block -->
+                         {% module "module_165211359150255" path="/Email Templates/Modules/Latest Stories", label="Latest Stories" %}
+                     </td>
+                   </tr>
+                   <tr>
+                      <td style="padding-top: 0px; padding-bottom: 10px; padding-left: 50px; padding-right: 50px; background-color: #ffffff; width: 100%; text-align: left; border-top: 2px solid #E5E5E5;">&nbsp;</td>
+                   </tr>
+                   <tr>
+                     <td class="rss-feed-padding">
+                         <!-- Hubspot RSS Feed List content block -->
+                         {% module "module_165211519327368" path="/Email Templates/Modules/post_rss_listing", label="Post Email RSS Listing" %}
+                     </td>
+                   </tr>
+                 </table>
+                 <!-- TABLE 4 CLOSE -->
+               <!--[if mso]>
+              </td>
+             </tr>
+            </table>
+            <![endif]--> 
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 50px;">
+           &nbsp;
+        </td>
+      </tr>
+    </table>
+    <!-- TABLE 1 CLOSE -->
+    <!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="700" style="border: none; border-spacing: 0;">
+             <tr>
+              <td width="700">
+               <![endif]-->
+                <!-- TABLE 5: FOOTER CONTAINER -->
+                <table class="footer-preferences" role="presentation" align="center" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 700px; border: none; border-spacing: 0; background-color: #E5E5E5;">
+                  <tr>
+                    <td align="center">
+                      <p id="footer" style="margin: 0px;">
+                        You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}. You can update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive. If you no longer wish to receive emails from JACS Solutions, you can unsubscribe from all future emails <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">here</a>.
+                        <br><br>
+                        {{ site_settings.company_name }}<br>
+                        {{ site_settings.company_street_address_1 }},&nbsp;{{ site_settings.company_street_address_2 }}<br>
+                        {{ site_settings.company_city }},&nbsp;{{ site_settings.company_state }}&nbsp;{{ site_settings.company_zip }}<br>
+                        {{ site_settings.company_country }}&nbsp;
+                        <br>
+                        Phone: 1-443-718-4333
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <!-- TABLE 5 CLOSE -->
+              <!--[if mso]>
+            </td>
+           </tr>
+          </table>
+         <![endif]-->
