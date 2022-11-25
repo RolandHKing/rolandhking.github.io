@@ -1,7 +1,7 @@
-# Salesforce Marketing Cloud Template & Email Design
+# Email Template, Module, & Content Block Design
 ## OVERVIEW
-### Email Templates and Content Blocks
- * Showing code for my Salesforce Marketing Cloud templates, including pre-designed content blocks for other email marketers to use in email campaigns. Source for all template files can be viewed on [my Github Repository](https://github.com/RolandHKing/rolandhking.github.io).
+### Email Templates, Content Blocks & Modules
+ * Showing code for my Hubspot MAS and Salesforce Marketing Cloud templates, including pre-designed modules and content blocks for other email marketers to use in building email campaigns. Source files for all template files can be viewed on [my Github Repository](https://github.com/RolandHKing/rolandhking.github.io).
 
 ### Email Examples
  * Includes two email builds and one "live" template to show all content block designs, which can be viewed on my [Github hosted page](https://rolandhking.github.io).
@@ -10,12 +10,13 @@
  * **Template and Content Block Design:** Roland King
  * **HTML and CSS:** Roland King
  * **Image/Asset Styling and Editing:** Roland King
- * **Email Copy:** UMBC Director of Marketing
+ * **Email Copy:** Roland King
 
-## TOOLS & TESTING
+## SYSTEM, TOOLS & TESTING
+* Salesforce Marketing Cloud (SFMC)
+* Hubspot MAS
 * Visual Studio Code Editor
 * Photoshop
-* Salesforce Marketing Cloud (SFMC)
 * Email on Acid
 
 ## FILE DETAILS
