@@ -44,24 +44,24 @@ Github Repository showing HTML/CSS for my Hubspot MAS and Salesforce Marketing C
 
 ### <ins>EMAIL EXAMPLES</ins>
 ### build-your-own-custom-device-at-techex-oct-5-6.html
-* test
-* [View Email →]()
+* Example of email campaign using dual CTA template
+* [View Email →](https://rolandhking.github.io/Hubspot/build-your-own-custom-device-at-techex-oct-5-6.html)
 
 ### extending-technology-lifecycles-extending-care-to-more-patients.html
 * test
 * [View Email →]()
 
 ### marketing-insights-report-october-2022.html
-* test
-* [View Email →]()
+* Example of Marketing Insights internal email template to sales teams
+* [View Email →](https://rolandhking.github.io/Hubspot/marketing-insights-report-october-2022.html)
 
 ### the-business-value-of-custom-technology.html
-* test
-* [View Email →]()
+* Example of email campaign using general email template
+* [View Email →](https://rolandhking.github.io/Hubspot/the-business-value-of-custom-technology.html)
 
 ### which-industries-have-the-greatest-need-for-rugged-technology.html
-* test
-* [View Email →]()
+* Example of email sharing latest website post using blog post template
+* [View Email →](https://rolandhking.github.io/Hubspot/which-industries-have-the-greatest-need-for-rugged-technology.html)
 
 # Salesforce Marketing Cloud
 ### <ins>TEMPLATES</ins>
