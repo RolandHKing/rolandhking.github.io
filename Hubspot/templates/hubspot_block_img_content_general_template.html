@@ -1,0 +1,578 @@
+<!--
+    templateType: email
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+    <style type="text/css" id="hs-inline-css">
+        /*<![CDATA[*/
+        /* everything in this style tag will be inlined onto matching elements */
+        /* GLOBAL FONT STYLES */
+        body {
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+            font-size: 18px;
+            color: #444444;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 170%;
+            word-spacing: normal;
+        }
+        /* GLOBAL STYLES APPLIED TO BODY CLASS FOR MSO */
+        .body {
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+            font-size: 18px;
+            color: #444444;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 170%;
+            word-spacing: normal;
+        }
+        /* CUSTOM HEADER STYLES AND SIZES */
+        h1 {
+            font-size: 32px;
+            color: #666666 !important;
+            font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
+            line-height: 120%;
+            font-style: normal;
+            font-weight: bold;
+            margin: 0px 0px 24px 0px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #666666 !important;
+            font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
+            line-height: 140%;
+            font-style: normal;
+            font-weight: bold;
+            margin: 0px 0px 20px 0px;
+        }
+        h3 {
+            font-size: 20px;
+            color: #666666 !important;
+            font-family: Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            font-style: normal;
+            line-height: 140%;
+            margin: 0px 0px 12px 0px;
+        }
+        h4 {
+            font-size: 20px;
+            color: #666666 !important;
+            font-family: Helvetica, Arial, sans-serif;
+            font-style: normal;
+            line-height: 140%;
+            margin: 0px 0px 12px 0px;
+        }
+        /* ANCHOR TAG STYLE UPDATE */
+        a {
+            font-family: Helvetica, Arial, sans-serif !important;
+            color: #00AEEF;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        /* REMOVE BORDER FROM ALL LINKED IMAGES */
+        a img {
+            border: none;
+        }
+        /* GENERAL CONTENT TAG OVERRIDES */
+        p {
+            margin: 0px 0px 20px 0px;
+        }
+        ul {
+            line-height: 170%;
+            margin: 15px 50px 30px 50px;
+            padding: 0;
+            list-style-type: square;
+        }
+        ol {
+            line-height: 170%;
+            margin: 15px 50px 30px 50px;
+            padding: 0;
+        }
+        ul li, ol li {
+            padding: 5px 0px;
+        }
+        img {
+            outline: 0;
+        }
+        /* FORCES FONT STYLE FOR MSO */
+        table, td, div, p {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        /* VIEW IN BROWSER TEXT STYLE */
+        td.view-in-browser {
+            padding: 5px 20px 5px 0px;
+            font-size: 10px;
+            color: #8c8c8c;
+            text-align: right;
+        }
+        .view-in-browser a {
+            font-size: 10px !important;
+            color: #8c8c8c !important;
+            text-decoration: underline !important;
+            font-weight: normal !important;
+        }
+        /* BACKGROUND IMAGE SETTINGS FOR HEADER AREA */
+        td.header-background-img {
+              background: #0A2540 url(https://email.jacs-solutions.com/hubfs/Email%20Marketing%20Templates/Assets/jacs-video-comp-background-header-v5.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              padding-top: 100px;
+        }   
+        /* APPLY PADDING FOR JACS LOGO CONTAINER */
+        td.jacs-logo {
+            padding: 35px 50px 30px 50px;
+        }
+        /* LOCK SIZE OF HERO IMAGE SO IT REMAINS MOBILE RESPONSIVE */
+        .hero-image img {
+            max-width: 600px !important;
+            width: 100% !important;
+            height: auto !important;
+        }
+        /* REMOVES LINE HEIGHT SPACER ON HERO IMAGE -- MSO ONLY */
+        .hero-image table td {
+            line-height: 100% !important;
+        }
+        /*************************************************************/
+        /* STYLES APPLIED DIRECTLY TO BLOCK IMAGE WITH TEXT MODULES */
+        /***********************************************************/
+        /* SETS MAX WIDTH AND RESPONSIVENESS OF BLOCK IMAGE */
+        .block-responsive-img img, .block-responsive-img-right img {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            margin: 0px !important;
+        }
+        /* SETS ALL ITEMS IN CONTENT BLOCK TO INLINE-BLOCK DISPLAY */
+        .block-responsive-img, .block-responsive-text, .block-responsive-text-left, .block-responsive-img-right {
+            display: inline-block;
+        }
+        /* ADDS LEFT PADDING TO TEXT CONTENT AREA OF BLOCK */
+        .block-responsive-text {
+            padding-left: 30px;
+        }
+        /* ADDS RIGHT PADDING TO TEXT CONTENT AREA OF BLOCK */
+        .block-responsive-text-left {
+            padding-right: 30px;
+        }
+        /***********************************************************/
+        /**********************************************************/
+        /* PADDING FOR CONTENT AREAS */
+        .body-padding {
+            padding: 40px 50px 10px 50px;
+        }  
+        /* PADDING AND ALIGNMENT FOR BLOCK IMAGE AND TEXT */
+        .block-img-text-padding {
+            padding: 10px 50px 30px 50px;
+            align-content: center;
+        }  
+        /* PADDING FOR CONTENT BLOCK BELOW BLOCK IMAGE AND TEXT MODULE */
+        .richtext-padding {
+            padding: 10px 50px 30px 50px;
+        }
+        /* BOTTOM PADDING TO ADD WHITE SPACE BELOW BUTTON */
+        .cta-button-padding {
+            padding: 0px 0px 60px 0px;
+        }
+        /* CUSTOM FOOTER STYLE UPDATES & OVERRIDES */
+        .footer-menu td, .footer-menu a {
+            font-size: 18px;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #e8e8e8 !important;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .footer-menu td {
+            padding: 30px 40px 40px 40px;
+        }
+        .footer-preferences a, .footer-preferences p, .footer-preferences td {
+            line-height: 150%;
+            font-size: 11px;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #d9d9d9 !important;
+            font-weight: lighter;
+            text-align: center;
+        }
+        .footer-preferences-size {
+            max-width: 500px;
+            width: 100%;
+            padding: 0px 20px;
+        }
+        /* SOCIAL ICON SIZE, FONT, AND POSITIONING */
+        .social-icons img {
+            display: block;
+            padding: 30px 10px 0px 10px;
+            width: 100%;
+            width: 40px;
+            margin: 0 auto !important;
+            height: auto !important;
+        }
+    </style>
+    <!-- MOBILE RESPONSIVE STYLES - 725px -->
+    <style type="text/css" id="hs-inline-css">
+        @media screen and (max-width: 725px) {
+          /* ADJUST PADDING FOR CONTENT CONTAINER */
+          .body-padding {
+               padding: 25px 25px 15px 25px !important;
+          }
+          /* ADJUST BACKGROUND IMAGE SETTINGS FOR HEADER AREA - CONTAIN SIZE AND LOWER PADDING */
+          td.header-background-img {
+              background: #0A2540 url(https://email.jacs-solutions.com/hubfs/Email%20Marketing%20Templates/Assets/jacs-video-comp-background-header-v5.jpg) !important;  
+              background-size: contain !important;
+              padding-top: 50px !important;
+          }
+          /*************************************************************/
+          /* STYLES APPLIED DIRECTLY TO BLOCK IMAGE WITH TEXT MODULES */
+          /***********************************************************/
+          /* RESETS MAX-WIDTH OF IMAGE TO DISPLAY AS SINGLE COLUMN */
+          .block-responsive-img img, .block-responsive-img-right img {
+              max-width: 600px !important;
+              height: auto !important;
+          }
+          /* RESETS MAX-WIDTH ON DIV CONTAINER OF IMAGE AND TEXT TO DISPLAY AS SINGLE COLUMN */
+          div.block-responsive-img, div.block-responsive-text, div.block-responsive-text-left, div.block-responsive-img-right {
+              max-width: 600px !important;
+              width: 100% !important;
+          }
+          /* PADDING REMOVAL FOR BLOCK TEXT */
+          .block-responsive-text, .block-responsive-text-left {
+              padding-left: 0px !important;
+          }
+          /* CONVERTS DISPLAY FOR BOTTOM CONTENT BLOCK WITH TEXT AND IMAGE FROM INLINE-BLOCK TO TABLE */
+          .mobile-flex-order {
+            display: table;
+          }
+          /* ASSIGNS ORDER FOR CONTENT WITHIN BLOCK SO THAT IMAGE IS DISPLAYED FIRST */
+         .mobile-flex-order > .block-responsive-img-right {
+              display: table-header-group !important;
+          }
+          /* ASSIGNS ORDER FOR CONTENT WITHIN BLOCK SO THAT TEXT FOLLOWS IMAGE */
+          .mobile-flex-order > .block-responsive-text-left {
+              display: table-footer-group !important;
+          }
+          /***********************************************************/
+          /***********************************************************/
+          /* ADJUST PADDING FOR BLOCK IMAGE AND TEXT FOR MOBILE */
+          .block-img-text-padding {
+               padding: 10px 25px 30px 25px !important;
+          }
+          /* PADDING FOR CONTENT BLOCK BELOW BLOCK IMAGE */
+          .richtext-padding {
+               padding: 10px 25px 30px 25px !important;
+          }
+        }
+    </style>
+    
+    <!-- MOBILE RESPONSIVE STYLES - 480px -->
+    <style type="text/css" id="hs-inline-css">
+        @media screen and (max-width: 480px) {
+          /* ADJUST HEADER SIZE FOR MOBILE VIEW */
+          h1 {
+              font-size: 28px !important;
+              margin: 0px 0px 12px 0px !important;
+          }
+          h2 {
+              font-size: 22px !important;
+              line-height: 140% !important;
+              margin: 0px 0px 12px 0px !important;
+          }
+          h3 {
+              font-size: 18px !important;
+              line-height: 150% !important;
+              margin: 0px 0px 10px 0px !important;
+          }
+          h4 {
+              font-size: 16px !important;
+              line-height: 140% !important;
+              margin: 0px 0px 10px 0px !important;
+          }
+          /* UPDATED MARGINS FOR LIST ITEMS FOR MOBILE */
+          ul, ol {
+              margin: 15px 30px 30px 40px;
+          }
+          /* REMOVE BOX SHADOW FOR MOBILE VIEW */
+          table.box-shadow-removal {
+              box-shadow: 0px 0px 0px 0px rgba(90,90,90,0.75) !important;
+          }
+          /* UPDATE PADDING AND CENTER VIEW IN BROWSER LINK */
+          .view-in-browser {
+              padding: 5px !important;
+              text-align: center !important;
+          }
+          /* ADJUST FONT SIZE FOR MOBILE VIEWING */
+          .body {
+              font-size: 14px !important;
+          }
+          /* CHANGE MAX-WIDTH SIZE FOR JACS LOGO IN MOBILE */
+          .jacs-logo img {
+              max-width: 65px !important;
+              height: auto !important;
+          }
+          /* UPDATE PADDING FOR JACS LOGO IN MOBILE */
+          td.jacs-logo {
+              padding: 15px 50px 10px 50px !important;
+          }
+          /* MOBILE PADDING UPDATES FOR CONTENT, BUTTONS, AND LINKS */
+          .body-padding {
+              padding: 25px 15px 5px 15px !important;
+          }
+          .block-img-text-padding {
+              padding: 10px 15px 10px 15px !important;
+          }
+          .richtext-padding {
+              padding: 10px 15px 10px 15px !important;
+          }
+          a.mobile-button-style {
+              font-size: 14px !important;
+          }
+          .dual-cta-mobile-padding {
+              padding-top: 8px;
+          }
+          /* UPDATED PADDING FOR FOOTER PREFERENCES AREA FOR 100% WIDTH MOBILE VIEW */
+          .footer-menu td {
+            padding: 10px 20px 20px 20px !important;
+          }
+          .footer-menu a {
+            font-size: 15px !important;
+          }
+        }
+    </style>
+    <!-- RESPONSIVE STYLE FOR OLDER DEVICES BELOW 400 SCREEN WIDTH -->
+    <style type="text/css" id="hs-inline-css">
+        @media screen and (max-width: 400px) {
+          .footer-menu td {
+              padding: 10px 10px 20px 10px !important;
+          }
+          .social-icons img {
+              padding: 30px 7px 0px 7px !important;
+              width: 30px !important;
+          }
+        }
+    </style>
+    <!-- MSO CUSTOM STYLES -->
+    <!--[if mso]>
+    <style type="text/css">
+        /* PADDING AND ALIGNMENT FOR BLOCK IMAGE AND TEXT */
+        .block-img-text-padding {
+              padding: 0px 50px 0px 50px !important;
+        }  
+        /* PADDING FOR CONTENT BLOCK BELOW BLOCK IMAGE */
+        .richtext-padding {
+              padding: 0px 50px 30px 50px !important;
+        }
+          /* RESET LINE HEIGHT, FIXED WIDTH, AND TEXT-ALIGN FOR CTA BUTTONS */
+          td.mso-cta-override-left, td.mso-cta-override-right {
+              line-height: 100%;
+              width: 200px !important;
+              text-align: center !important;
+          }
+          .mso-cta-override-left a {
+              color: #FFFFFF !important;
+          }
+          .mso-cta-override-right a {
+              color: #023E8A !important;
+          }
+          /* RESET LINE HEIGHT FOR P TAGS */
+					p, div {
+							line-height: 140%;
+					}
+    </style>
+    <![endif]--> 
+  </head>
+  <body>
+    <!-- Preview text (text which appears right after subject in certain email clients) -->
+    <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}
+    </div>
+    <!-- PREHEADER WHITESPACE HACK -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <!-- TABLE 1: MAIN CONTAINER CENTERED -->
+    <table class="body" role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color: #F7F7F7; border: none; border-spacing: 0;">
+      <tr>
+        <td class="view-in-browser">
+          <!-- View as webpage link -->
+          {% if content.create_page %}
+          <div><a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">View email in browser</a>.</div>
+          {% endif %}
+         </td>
+      </tr>
+      <tr>
+        <td align="center" class="header-background-img">
+          <!--[if mso]>
+          <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="700" style="border: none; border-spacing: 0;">
+            <tr>
+              <td width="700">
+               <![endif]-->
+                <!-- TABLE 2: CONTAINER FOR LOGO IMAGE -->
+                <table role="presentation" align="center" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 700px; border: none; border-spacing: 0; background-color: #FFFFFF;"> 
+                  <tr>
+                    <td class="jacs-logo" align="center">
+                      <!-- Hubspot email template logo -->
+                      {% module "module_164427049370410" path="/Email Templates/Modules/JACS Logo - Blue", label="JACS Logo" %}
+                    </td>
+                  </tr>
+                </table>
+               <!--[if mso]>
+              </td>
+            </tr>
+          </table>
+          <![endif]-->
+        </td>
+       </tr>
+       <tr>
+         <td>
+            <!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="700" style="border: none; border-spacing: 0;">
+             <tr>
+              <td width="700">
+               <![endif]-->
+                 <!-- TABLE 3: HERO IMAGE & MAIN CONTENT -->
+                 <table role="presentation" align="center" cellspacing="0" cellpadding="0" class="box-shadow-removal" style="width: 100%; max-width: 700px; border: none; border-spacing: 0; background-color: #FFFFFF; box-shadow: 0px 10px 12px -5px rgba(90,90,90,0.75);">
+                   <tr>
+                     <td align="center" class="hero-image">
+                       <!-- Hubspot module: hero image content block -->
+                       {% module "module_16442778295441" path="/Email Templates/Modules/Email Hero Image 600px", label="Email Hero Image" %}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td class="body-padding">
+                       <!-- Hubspot module: main content block -->
+                       {% module "email_template_main_email_body" path="@hubspot/email_body" label="Main Email Body" %}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td align="left" class="block-img-text-padding">
+                       <!-- Hubspot module: images with text content block: image on left, content right -->
+                       {% module "module_166793685067512" path="/Email Templates/Modules/Block - Left Image with Title and Text", label="Block - Left Image with Title and Text" %}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td align="left" class="block-img-text-padding">
+                       <!-- Hubspot module: images with text content block: image on right, content left -->
+                       {% module "module_166800534764942" path="/Email Templates/Modules/Block - Right Image with Title and Text", label="Block - Right Image with Title and Text" %}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td class="richtext-padding">
+                        <!-- Hubspot module: rich text content block -->
+                        {% module "module_166742493751849" path="/Email Templates/Modules/Body Content Snippet", label="Body Content Snippet" %}
+                     </td>
+                   </tr>
+                   <tr>
+                     <!-- Hubspot module: dual CTA button, inline -->
+                     <td align="center" class="cta-button-padding">
+                       {% module "module_166742341158436" path="/Email Templates/Modules/Dual CTA Buttons Inline", label="Dual CTA Buttons Inline" %}
+                     </td>
+                   </tr>
+                 </table>
+                 <!-- TABLE 3 CLOSE -->
+               <!--[if mso]>
+              </td>
+             </tr>
+            </table>
+            <![endif]--> 
+         </td>
+      </tr>
+      <tr>
+        <td style="height: 85px;">
+           &nbsp;
+        </td>
+      </tr>
+    </table>
+    <!-- TABLE 1 CLOSE -->
+    <!-- TABLE 4: FOOTER CONTAINER -->
+    <table role="presentation" width="100%" align="center" cellspacing="0" cellpadding="0" style="border: none; border-spacing: 0; background-color: #0A2540;">
+      <tr>
+        <td style="padding-top: 40px;">
+          <!-- TABLE 5: FOOTER MENU -->
+          <table role="presentation" class="footer-menu" align="center" cellspacing="0" cellpadding="0" style="border: none; border-spacing: 0;">
+            <tr>
+              <td align="center">
+                <a alias="footer menu technologies" title="footer menu technologies" href="https://www.jacs-solutions.com/iot-solutions/technologies/">Technologies</a>
+              </td>
+              <td align="center">
+                <a alias="footer menu platforms" title="footer menu platforms" href="https://www.jacs-solutions.com/iot-solutions/platforms/">Platforms</a>
+              </td>
+              <td align="center">
+                <a alias="footer menu use cases" title="footer menu use cases" href="https://www.jacs-solutions.com/iot-solutions/use-cases/">Use Cases</a>
+              </td>
+            </tr>
+          </table>
+          <!-- TABLE 5 CLOSE -->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- TABLE 6: LINE BREAK -->
+          <table align="center" cellpadding="0" cellspacing="0" style="width: 70%; max-width: 700px; border-top: 2px solid #999999; border-collapse: collapse; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+            <tr>
+              <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <span>&nbsp;</span>
+              </td>
+            </tr>
+          </table>
+          <!-- TABLE 6 CLOSE -->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- TABLE 7: FOOTER PREFERENCES -->
+          <table class="footer-preferences" role="presentation" align="center" cellspacing="0" cellpadding="0" style="border: none; border-spacing: 0;">
+            <tr>
+              <td class="footer-preferences-size" align="center">
+                <!--[if mso]>
+                <table role="presentation" align="center" style="width: 500px;">
+                  <tr>
+                    <td align="center" style="line-height: 150%; font-size: 11px; font-family: Helvetica, Arial, sans-serif; color: #d9d9d9; font-weight: lighter; padding: 20px;">
+                    <![endif]-->
+                      <p>
+                        To ensure delivery to your inbox, please add <a href="mailto:marketing@jacs-solutions.com">marketing@jacs-solutions.com</a> to your address book or safe-senders list.
+                        <br><br>
+                        You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}. You can update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive. If you no longer wish to receive emails from JACS Solutions, you can unsubscribe from all future emails <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">here</a>.
+                        <br><br>
+                        {{ site_settings.company_name }}<br>
+                        {{ site_settings.company_street_address_1 }},&nbsp;{{ site_settings.company_street_address_2 }}<br>
+                        {{ site_settings.company_city }},&nbsp;{{ site_settings.company_state }}&nbsp;{{ site_settings.company_zip }}<br>
+                        {{ site_settings.company_country }}&nbsp;
+                        <br><br>
+                        Phone: 1-443-718-4333
+                      </p>
+                  <!--[if mso]>
+                  </td>
+                </tr>
+              </table>
+              <![endif]-->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <!-- TABLE 8: SOCIAL MEDIA -->
+                <table role="presentation" class="social-media" align="center" cellspacing="0" cellpadding="0" style="border: none; border-spacing: 0;">
+                  <tr class="social-icons">
+                    <td align="center" valign="middle">
+                      <a alias="JACS Linkedin profile page" title="JACS Linkedin profile page" href="https://www.linkedin.com/company/9244710"><img src="https://f.hubspotusercontent10.net/hubfs/20264516/Logos/linkedin-logo.png" width="40px"></a>
+                    </td>
+                    <td align="center" valign="middle">
+                      <a alias="JACS Twitter Feed" title="JACS Twitter Feed" href="https://twitter.com/JacsSolutions"><img src="https://f.hubspotusercontent10.net/hubfs/20264516/Logos/twitter-logo.png" width="40px"></a>
+                    </td>
+                  </tr>
+                </table>
+                <!-- TABLE 8 CLOSE -->
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 50px;">
+                &nbsp;
+              </td>
+            </tr>
+          </table>
+          <!-- TABLE 7 CLOSE -->
+        </td>
+      </tr>
+    </table>
+    <!-- TABLE 4 CLOSE -->
+  </body>
