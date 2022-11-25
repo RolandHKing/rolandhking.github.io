@@ -19,11 +19,25 @@ Showing code for my Hubspot MAS and Salesforce Marketing Cloud templates, includ
 ## HUBSPOT
 ### <ins>TEMPLATES</ins>
 CSS and HTML source files showing template design and approach within the Hubspot system.
-* hubspot_block_img_content_general_template.html (Highlight: Uses display attribute to present content and images in traditional and responsive view.)
-* hubspot_blog_post_template.html (Highlight: Custom modules so template can be easily used by non-technical team members to send blog post emails. Includes RSS module.)
-* hubspot_dual_CTA_email_template.html (Highlight: Blend of CSS and Photoshop design to present illusion of overlapping content area to draw reader in.)
-* hubspot_marketing_report_email_template_internal.html (Highlight: Card-style approach to easily find content that matters most to internal sales team.)
-* hubspot_default_email_template.html (Highlight: Use of background url() to draw attention to email and increase CTA.)
+hubspot_block_img_content_general_template.html
+* Uses display attribute to present content and images in traditional and responsive view.
+* [View Source →]()
+
+hubspot_blog_post_template.html
+* Custom modules so template can be easily used by non-technical team members to send blog post emails. Includes RSS module.
+* [View Source →]()
+
+hubspot_dual_CTA_email_template.html
+* Highlight: Blend of CSS and Photoshop design to present illusion of overlapping content area to draw reader in.
+* [View Source →]()
+
+hubspot_marketing_report_email_template_internal.html
+* Highlight: Card-style approach to easily find content that matters most to internal sales team.
+* [View Source →]()
+
+hubspot_default_email_template.html
+* Highlight: Use of background url() to draw attention to email and increase CTA.
+* [View Source →]()
 
 ### <ins>EMAIL EXAMPLES</ins>
 
