@@ -19,7 +19,7 @@ Github Repository showing HTML/CSS for my Hubspot MAS and Salesforce Marketing C
 ### <ins>TEMPLATES</ins>
 
 ### hubspot_block_img_content_general_template.html
-* Uses display attribute to present content and images in traditional and responsive view.
+* Uses display attribute to present content and images in traditional and responsive view, as well as inline dual CTA buttons.
 * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_block_img_content_general_template.html)
 * [View Associated Modules →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/Modules/hubspot_module_assets_block_content_img_text_template.html)
 
@@ -43,25 +43,26 @@ Github Repository showing HTML/CSS for my Hubspot MAS and Salesforce Marketing C
 * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_marketing_report_email_template_internal.html)
 
 ### <ins>EMAIL EXAMPLES</ins>
+
+### extending-technology-lifecycles-extending-care-to-more-patients.html
+* Email example showcasing block image and content sections using block image general template
+* [View Email →](https://rolandhking.github.io/Hubspot/extending-technology-lifecycles-extending-care-to-more-patients.html)
+
 ### build-your-own-custom-device-at-techex-oct-5-6.html
 * Example of email campaign using dual CTA template
 * [View Email →](https://rolandhking.github.io/Hubspot/build-your-own-custom-device-at-techex-oct-5-6.html)
 
-### extending-technology-lifecycles-extending-care-to-more-patients.html
-* test
-* [View Email →]()
-
-### marketing-insights-report-october-2022.html
-* Example of Marketing Insights internal email template to sales teams
-* [View Email →](https://rolandhking.github.io/Hubspot/marketing-insights-report-october-2022.html)
+### which-industries-have-the-greatest-need-for-rugged-technology.html
+* Example of email sharing latest website post using blog post template
+* [View Email →](https://rolandhking.github.io/Hubspot/which-industries-have-the-greatest-need-for-rugged-technology.html)
 
 ### the-business-value-of-custom-technology.html
 * Example of email campaign using general email template
 * [View Email →](https://rolandhking.github.io/Hubspot/the-business-value-of-custom-technology.html)
 
-### which-industries-have-the-greatest-need-for-rugged-technology.html
-* Example of email sharing latest website post using blog post template
-* [View Email →](https://rolandhking.github.io/Hubspot/which-industries-have-the-greatest-need-for-rugged-technology.html)
+### marketing-insights-report-october-2022.html
+* Example of Marketing Insights internal email template to sales teams
+* [View Email →](https://rolandhking.github.io/Hubspot/marketing-insights-report-october-2022.html)
 
 # Salesforce Marketing Cloud
 ### <ins>TEMPLATES</ins>
