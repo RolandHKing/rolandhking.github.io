@@ -15,7 +15,7 @@ Github Repository showing HTML/CSS for my Hubspot MAS and Salesforce Marketing C
 * Photoshop
 * Email on Acid
 
-# HUBSPOT
+# Hubspot
 ### <ins>TEMPLATES</ins>
 
 ### hubspot_block_img_content_general_template.html
@@ -44,7 +44,7 @@ Github Repository showing HTML/CSS for my Hubspot MAS and Salesforce Marketing C
 
 ### <ins>EMAIL EXAMPLES</ins>
 
-# SALESFORCE MARKETING CLOUD
+# Salesforce Marketing Cloud
 ### <ins>TEMPLATES</ins>
 ### content_blocks_template.html
  * HTML and CSS for all content blocks designed for SFMC
