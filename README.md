@@ -9,7 +9,7 @@ Showing code for my Hubspot MAS and Salesforce Marketing Cloud (SFMC) templates,
  * **Image/Asset Styling and Editing:** Roland King
  * **Email Copy:** Roland King
 
-## SYSTEM, TOOLS & TESTING
+## SYSTEMS, TOOLS & TESTING
 * Hubspot MAS
 * SFMC
 * Visual Studio Code Editor
