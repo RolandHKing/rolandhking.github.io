@@ -16,7 +16,7 @@ Showing code for my Hubspot MAS and Salesforce Marketing Cloud (SFMC) templates,
 * Photoshop
 * Email on Acid
 
-## HUBSPOT
+# HUBSPOT
 ### <ins>TEMPLATES</ins>
 
 ### hubspot_block_img_content_general_template.html
@@ -45,7 +45,7 @@ Showing code for my Hubspot MAS and Salesforce Marketing Cloud (SFMC) templates,
 
 ### <ins>EMAIL EXAMPLES</ins>
 
-## SALESFORCE MARKETING CLOUD
+# SALESFORCE MARKETING CLOUD
 ### <ins>TEMPLATES</ins>
 ### content_blocks_template.html
  * HTML and CSS for all content blocks designed for SFMC
