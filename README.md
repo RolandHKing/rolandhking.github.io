@@ -24,7 +24,7 @@ Github Repository showing HTML/CSS for my Hubspot MAS and Salesforce Marketing C
 * [View Associated Modules →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/Modules/hubspot_module_assets_block_content_img_text_template.html)
 
 ### hubspot_dual_CTA_email_template.html
-* Highlight: Blend of CSS and Photoshop design to present illusion of overlapping content area to draw reader in.
+* Blend of CSS and Photoshop design to present illusion of overlapping content area to draw reader in.
 * [View Source →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/templates/hubspot_dual_CTA_email_template.html)
 * [View Associated Modules →](https://github.com/RolandHKing/rolandhking.github.io/blob/main/Hubspot/Modules/hubspot_module_assets_dual_CTA_template.html)
 
